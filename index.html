@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Welcome to Whomst-Host! Enter your source code below to get a simple page up and running.</h1>
-    <textarea></textarea>
+    <h1>Welcome to Whomst-Host!<br>Enter your websites source code below to get a simple page up and running.</h1>
+    <textarea id="input" onkeyup="sendCode()"></textarea>
+    <script>
+      var input = document.getElementById("input");
+      function sendCode(){
+ var code = urlencode(input.value);
+        document.write(code);
+}
+    </script>
   </body>
 </html>
