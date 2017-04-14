@@ -2,12 +2,13 @@
 <html>
   <body>
     <h1>Welcome to Whomst-Host!<br>Enter your websites source code below to get a simple page up and running.</h1>
-    <textarea id="input" onkeyup="sendCode()"></textarea>
+    <textarea id="input"></textarea>
+    <button onclick="sendcode">go</button>
     <script>
       var input = document.getElementById("input");
       function sendCode(){
- var code = urlencode(input.value);
-        document.write(code);
+ var code = urlencode(escape(input.value));
+        document.write("https://v.gd/create.php?format=simple&url="+code);
 }
     </script>
   </body>
