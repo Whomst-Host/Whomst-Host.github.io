@@ -7,7 +7,7 @@
     <script>
       var input = document.getElementById("input");
       function sendCode(){
- var code = encodeURIComponent(escape(input.value));
+ var code = escape(input.value);
         location.href = "/m.htm?"+code;
 }
     </script>
