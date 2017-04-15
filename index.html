@@ -2,13 +2,7 @@
 <html>
    <head>
 	   <title>Whomst-Host</title>
-      <script>
-         var input = document.getElementById("input");
-         function sendCode(){
-         var code = escape(input.value);
-           location.href = "/m.htm?"+code;
-         }
-      </script>
+      
       <style>
          .myButton {
          -moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
@@ -77,5 +71,12 @@
       <textarea id="input" placeholder="Paste your source code." cols="65" rows="20" autofocus required></textarea>
       <br>
       <button onclick="sendCode()" class="myButton">Go!</button>
+	<script>
+         var input = document.getElementById("input");
+         function sendCode(){
+         var code = escape(input.value);
+           location.href = "/m.htm?"+code;
+         }
+      </script>
    </body>
 </html>
