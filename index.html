@@ -18,7 +18,7 @@
         var input = document.getElementById("input");
 
         function sendCode() {
-            var code = escape('<meta http-equiv="X-XSS-Protection" content="0">'+input.value);
+            var code = escape(input.value);
             location.href = "/m.htm?" + code;
         }
     </script>
