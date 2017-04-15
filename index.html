@@ -1,18 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Welcome to Whomst-Host!<br>Enter your websites source code below to get a simple page up and running.</h1>
-    <textarea id="input"></textarea>
-    <button onclick="sendCode()">go</button>
-    <script>
+<head>
+<script>
       var input = document.getElementById("input");
       function sendCode(){
  var code = escape(input.value);
         location.href = "/m.htm?"+code;
 }
     </script>
+<style>
+.myButton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffe224));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffe224 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffe224 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffe224 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffe224 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffe224 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffe224',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffed24;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffe224), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffe224 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffe224 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffe224 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffe224 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffe224 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe224', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffe224;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  body {
+  padding-top: 80px;
+  text-align: center;
+  font-family: monaco, monospace;
+  background: url(http://media.giphy.com/media/Jrd9E2kuPuOYM/giphy.gif) 50%;
+  background-size: cover;
+}
+h1, h2 {
+  display: inline-block;
+  background: #fff;
+}
+h1 {
+  font-size: 30px
+}
+h2 {
+  font-size: 20px;
+}
+span {
+  background: #fd0;
+}
+</style>
+
+  
+  </head>
+  <body>
+    <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a simple page up and running.</h1>
+    <textarea id="input" placeholder="Paste your source code." cols="65" rows="20" autofocus required></textarea>
+    <br>
+    <button onclick="sendCode()" class="myButton">Go!</button>
   </body>
 </html>
