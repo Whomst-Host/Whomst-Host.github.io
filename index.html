@@ -1,58 +1,60 @@
-
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="windowfiles/dhtmlwindow.css" type="text/css">
-    <script type="text/javascript" src="windowfiles/dhtmlwindow.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <title>Whomst-Host</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    <div id="about" style="display: none;">
-        <!-- Hidden DIV within popup. -->
-        <h2>What is <span>Whomst-Host</span>?</h2><br>
-        Whomst-Host is a client side webhost for single page websites.<br>
-        If you want to quickly get a demo or landing page setup, you can do so in <span>one click</span>. Simply paste your code in the box, and click the button.<br>
-       <hr><h2>How does it <span>Work</span>?</h2><br>
-        Unlike most webhosts, Whomst-Host stores your website's source code on the client side (in the URL). This means that it does not require any storage on our end, and no sign-up on your end.<br>
-        <hr><h2>Credits</h2><br>
-        Whomst-Host is made and maintained by <span>Ron Friedman</span>, AKA <a href="https://github.com/RonSkons">RonSkons</a>.<br>It uses a <a href="http://dynamicdrive.com/dynamicindex8/dhtmlwindow/index.htm">widget</a> from DynamicDrive to show windows like this.<br>
-        <hr><h2><span>Support</span> Whomst-Host</h2><br>
-        Whomst-Host is a free and ad-free service. If you enjoy using it, you can donate Bitcoin or Dogecoin to the addresses below:<br>
-        <h3>BTC: 1eJja6AgN1ka6SnAYFCyPUm13DWricwH2</h3>
-        <h3>DOGE: D9YvJt1gDg4SbMyEepQZvcT4gxyEQ6yYTb</h3>
-    </div>
-    <div id="contact" style="display: none;">
-        <!-- Hidden DIV within popup. -->
-        If you are experiencing trouble or if the service is not functioning properly, you can report an 
-<a class="github-button" href="https://github.com/whomst-host/whomst-host.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue whomst-host/whomst-host.github.io on GitHub">Issue</a><br><br>
-        I will try to fix it to the best of my abilities. You can also reach me by email at <a href="mailto:ron852719@icloud.com">ron852719@icloud.com</a>
-    </div>
-    
-    
-    <!-- Main Page Start -->
-    <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a page up and running.</h1>
-    <br>
-    <textarea id="input" placeholder="Paste your source code here." cols="65" rows="20" autofocus></textarea>
-    <br>
-    <button onclick="sendCode()" class="myButton">Go!</button>
-    <script>
-        var input = document.getElementById("input");
-
-        function sendCode() {
-            var code = input.value.split("").reverse().join("");
-            location.href = "/m.htm?" + code;
-        }
-    </script>
-    <br><br><br><br>
-</body>
-<footer>
-    <a class="github-button" href="https://github.com/RonSkons" aria-label="Follow @RonSkons on GitHub">Follow @RonSkons</a>&nbsp;
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png" /></a>&nbsp;
-    <button onclick='dhtmlwindow.open("aboutPop", "div", "about", "About Whomst-Host", "width=585px,height=420px,resize=1,scrolling=1,center=1", "recal")' class="myButton">About</button>&nbsp;
-    <button onclick='dhtmlwindow.open("contactPop", "div", "contact", "Contact or Report an Issue", "width=585px,height=250px,resize=1,scrolling=1,center=1", "recal")' class="myButton">Contact</button>
-</footer>
+   <head>
+      <link rel="stylesheet" href="windowfiles/dhtmlwindow.css" type="text/css">
+      <script type="text/javascript" src="windowfiles/dhtmlwindow.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <title>Whomst-Host</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <div id="about" style="display: none;">
+         <!-- Hidden DIV within popup. -->
+         <h2>What is <span>Whomst-Host</span>?</h2>
+         <br>
+         Whomst-Host is a client side webhost for single page websites.<br>
+         If you want to quickly get a demo or landing page setup, you can do so in <span>one click</span>. Simply paste your code in the box, and click the button.<br>
+         <hr>
+         <h2>How does it <span>Work</span>?</h2>
+         <br>
+         Unlike most webhosts, Whomst-Host stores your website's source code on the client side (in the URL). This means that it does not require any storage on our end, and no sign-up on your end.<br>
+         <hr>
+         <h2>Credits</h2>
+         <br>
+         Whomst-Host is made and maintained by <span>Ron Friedman</span>, AKA <a href="https://github.com/RonSkons">RonSkons</a> with help from <a href="https://github.com/Herohamp">Herohamp</a>.<br>It uses a <a href="http://dynamicdrive.com/dynamicindex8/dhtmlwindow/index.htm">widget</a> from DynamicDrive to show windows like this.<br>
+         <hr>
+         <h2><span>Support</span> Whomst-Host</h2>
+         <br>
+         Whomst-Host is a free and ad-free service. If you enjoy using it, you can donate Bitcoin or Dogecoin to the addresses below:<br>
+         <h3>BTC: 1eJja6AgN1ka6SnAYFCyPUm13DWricwH2</h3>
+         <h3>DOGE: D9YvJt1gDg4SbMyEepQZvcT4gxyEQ6yYTb</h3>
+      </div>
+      <div id="contact" style="display: none;">
+         <!-- Hidden DIV within popup. -->
+         If you are experiencing trouble or if the service is not functioning properly, you can report an 
+         <a class="github-button" href="https://github.com/whomst-host/whomst-host.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue whomst-host/whomst-host.github.io on GitHub">Issue</a><br><br>
+         I will try to fix it to the best of my abilities. You can also reach me by email at <a href="mailto:ron852719@icloud.com">ron852719@icloud.com</a>
+      </div>
+      <!-- Main Page Start -->
+      <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a page up and running.</h1>
+      <br>
+      <textarea id="input" placeholder="Paste your source code here." cols="65" rows="20" autofocus></textarea>
+      <br>
+      <button onclick="sendCode()" class="myButton">Go!</button>
+      <script>
+         var input = document.getElementById("input");
+         
+         function sendCode() {
+             var code = input.value.split("").reverse().join("");
+             location.href = "/m.htm?" + code;
+         }
+      </script>
+      <br><br><br><br>
+   </body>
+   <footer>
+      <a class="github-button" href="https://github.com/RonSkons" aria-label="Follow @RonSkons on GitHub">Follow @RonSkons</a>&nbsp;
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png" /></a>&nbsp;
+      <button onclick='dhtmlwindow.open("aboutPop", "div", "about", "About Whomst-Host", "width=585px,height=420px,resize=1,scrolling=1,center=1", "recal")' class="myButton">About</button>&nbsp;
+      <button onclick='dhtmlwindow.open("contactPop", "div", "contact", "Contact or Report an Issue", "width=585px,height=250px,resize=1,scrolling=1,center=1", "recal")' class="myButton">Contact</button>
+   </footer>
 </html>
