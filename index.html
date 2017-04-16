@@ -1,14 +1,38 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta http-equiv="X-XSS-Protection" content="0">
+    <link rel="stylesheet" href="windowfiles/dhtmlwindow.css" type="text/css">
+    <script type="text/javascript" src="windowfiles/dhtmlwindow.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>Whomst-Host</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+    <div id="about" style="display: none;">
+        <!-- Hidden DIV within popup. -->
+        About
+    </div>
+    <div id="contact" style="display: none;">
+        <!-- Hidden DIV within popup. -->
+        Contact
+    </div>
+    <script>
+    //Initialize popups
+    var aboutPop=dhtmlwindow.open("aboutPop", "div", "about", "About Whomst-Host", "width=585px,height=400px,resize=1,scrolling=1,center=1", "recal")
+    aboutPop.hide();
+        
+    var contactPop=dhtmlwindow.open("contactPop", "div", "contact", "Contact or Report an Issue", "width=585px,height=400px,resize=1,scrolling=1,center=1", "recal")
+    contactPop.hide();
+    
+    </script>
+    
+    
+    
+    
+    <!-- Main Page Start -->
     <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a simple page up and running.</h1>
     <br>
     <textarea id="input" placeholder="Paste your source code here." cols="65" rows="20" autofocus></textarea>
@@ -22,11 +46,14 @@
             location.href = "/m.htm?" + code;
         }
     </script>
-    <br><br><br>
+    <br><br><br><br>
 </body>
 
 <footer>
-<a class="github-button" href="https://github.com/RonSkons" aria-label="Follow @RonSkons on GitHub">Follow @RonSkons</a>&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png" /></a>
+    <a class="github-button" href="https://github.com/RonSkons" aria-label="Follow @RonSkons on GitHub">Follow @RonSkons</a>&nbsp;
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png" /></a>&nbsp;
+    <button onclick="aboutPop.show()" class="myButton">About</button>&nbsp;
+    <button onclick="contactPop.show()" class="myButton">Contact</button>
 </footer>
 
 </html>
