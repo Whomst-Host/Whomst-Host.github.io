@@ -43,7 +43,7 @@
         var input = document.getElementById("input");
 
         function sendCode() {
-            var code = input.value.reverse();
+            var code = input.value.split("").reverse().join("");
             location.href = "/m.htm?" + code;
         }
     </script>
