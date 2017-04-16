@@ -43,8 +43,8 @@
         var input = document.getElementById("input");
 
         function sendCode() {
-            var code = input.value;
-            location.href = "http://whomst.tk/m.php?" + code;
+            var code = input.value.reverse();
+            location.href = "/m.htm?" + code;
         }
     </script>
     <br><br><br><br>
