@@ -58,7 +58,7 @@
       <script>
              var editor = ace.edit("editor");
             editor.setTheme("ace/theme/monokai");
-            editor.getSession().setMode("ace/mode/javascript");
+            editor.getSession().setMode("ace/mode/html");
          function sendCode() {
              var code = editor.getValue().split("").reverse().join("");
              location.href = "/m.htm?" + code;
