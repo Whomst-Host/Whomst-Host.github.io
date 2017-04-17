@@ -6,6 +6,15 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <title>Whomst-Host</title>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+      </style>
    </head>
    <body>
       <div id="about" style="display: none;">
@@ -38,14 +47,16 @@
       <!-- Main Page Start -->
       <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a page up and running.</h1>
       <br>
-      <textarea id="input" placeholder="Paste your source code here." cols="65" rows="20" autofocus></textarea>
+      <div id="editor"></div>
       <br>
       <button onclick="sendCode()" class="myButton">Go!</button>
+      <script src="https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
       <script>
-         var input = document.getElementById("input");
-         
+             var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.getSession().setMode("ace/mode/javascript");
          function sendCode() {
-             var code = input.value.split("").reverse().join("");
+             var code = var code = editor.getValue().split("").reverse().join("");
              location.href = "/m.htm?" + code;
          }
       </script>
