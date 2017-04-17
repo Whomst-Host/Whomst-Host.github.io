@@ -55,6 +55,6 @@
         h2 {
             font-size: 20px;
         }
-        span:not(.ace_identifier) {
+        span:not([class^="ace"]) {
             background: #6fcbf2;
         }
