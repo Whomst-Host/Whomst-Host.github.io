@@ -56,7 +56,7 @@
             editor.setTheme("ace/theme/monokai");
             editor.getSession().setMode("ace/mode/javascript");
          function sendCode() {
-             var code = var code = editor.getValue().split("").reverse().join("");
+             var code = editor.getValue().split("").reverse().join("");
              location.href = "/m.htm?" + code;
          }
       </script>
