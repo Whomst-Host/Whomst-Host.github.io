@@ -6,19 +6,18 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <title>Whomst-Host</title>
       <link rel="stylesheet" type="text/css" href="style.css">
-        <style type="text/css" media="screen">
-
-	.ace_editor {
-		border: 1px solid lightgray;
-		margin: auto;
-		height: 200px;
-		width: 80%;
-	}
-	.scrollmargin {
-		height: 80px;
-        text-align: center;
-	}
-    </style>
+      <style type="text/css" media="screen">
+         .ace_editor {
+         border: 1px solid lightgray;
+         margin: auto;
+         height: 200px;
+         width: 80%;
+         }
+         .scrollmargin {
+         height: 80px;
+         text-align: center;
+         }
+      </style>
    </head>
    <body>
       <div id="about" style="display: none;">
@@ -51,20 +50,22 @@
       <!-- Main Page Start -->
       <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a page up and running.</h1>
       <br>
-	   <div id="editor"></div><br>Pick a <span>server</span>
-	   <select>
-  <option value="/m.htm?">Whomst-Host.Github.io</option>
-  <option value="http://whomst.tk/?">Whomst.tk</option>
+      <div id="editor"></div>
+	   <br><h2>Pick a <span>server</span></h2>
+      <select id="server">
+         <option value="/m.htm?">Whomst-Host.Github.io</option>
+         <option value="http://whomst.tk/?">Whomst.tk</option>
+      </select>
       <br>
       <button onclick="sendCode()" class="myButton">Go!</button>
       <script src="https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
       <script>
-             var editor = ace.edit("editor");
-            editor.setTheme("ace/theme/chaos");
-            editor.getSession().setMode("ace/mode/html");
+         var editor = ace.edit("editor");
+         editor.setTheme("ace/theme/chaos");
+         editor.getSession().setMode("ace/mode/html");
          function sendCode() {
-             var code = editor.getValue().split("").reverse().join("");
-             location.href = "/m.htm?" + code;
+         var code = editor.getValue().split("").reverse().join("");
+         location.href = document.getElementByID("server").value + code;
          }
       </script>
       <br><br><br><br>
