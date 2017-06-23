@@ -6,18 +6,19 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <title>Whomst-Host</title>
       <link rel="stylesheet" type="text/css" href="style.css">
-      <style type="text/css" media="screen">
-         .ace_editor {
-         border: 1px solid lightgray;
-         margin: auto;
-         height: 200px;
-         width: 80%;
-         }
-         .scrollmargin {
-         height: 80px;
-         text-align: center;
-         }
-      </style>
+        <style type="text/css" media="screen">
+
+	.ace_editor {
+		border: 1px solid lightgray;
+		margin: auto;
+		height: 200px;
+		width: 80%;
+	}
+	.scrollmargin {
+		height: 80px;
+        text-align: center;
+	}
+    </style>
    </head>
    <body>
       <div id="about" style="display: none;">
@@ -37,7 +38,7 @@
          <hr>
          <h2><span>Support</span> Whomst-Host</h2>
          <br>
-         Whomst-Host is a free and ad-free service. If you enjoy using it, you can donate Bitcoin or Dogecoin to the addresses below:<br>
+         Whomst-Host is a free,and we show five-second ads when you create pages. People who visit your page will <b>never</b> be shown ads. If you enjoy using it, you can donate Bitcoin or Dogecoin to the addresses below:<br>
          <h3>BTC: 1eJja6AgN1ka6SnAYFCyPUm13DWricwH2</h3>
          <h3>DOGE: D9YvJt1gDg4SbMyEepQZvcT4gxyEQ6yYTb</h3>
       </div>
@@ -50,21 +51,17 @@
       <!-- Main Page Start -->
       <h1>Welcome to <span>Whomst-Host!</span><br>Enter your website's source code below to get a page up and running.</h1>
       <br>
-      <div id="editor"></div><br>
-	   <br><h4 style="background-color:white;display: inline;">Pick a <span>server</span>:</h4>
-      <select id="server">
-         <option value="/m.htm?">Whomst-Host.Github.io</option>
-         <option value="http://whomst.tk/?">Whomst.tk</option>
-      </select><br><br>
+	   <div id="editor"></div>
+      <br>
       <button onclick="sendCode()" class="myButton">Go!</button>
       <script src="https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
       <script>
-         var editor = ace.edit("editor");
-         editor.setTheme("ace/theme/chaos");
-         editor.getSession().setMode("ace/mode/html");
+             var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/chaos");
+            editor.getSession().setMode("ace/mode/html");
          function sendCode() {
-         var code = editor.getValue().split("").reverse().join("");
-         location.href = document.getElementById("server").value + code;
+             var code = editor.getValue().split("").reverse().join("");
+             location.href = "/m.htm?" + code;
          }
       </script>
       <br><br><br><br>
