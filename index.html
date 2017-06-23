@@ -3,6 +3,7 @@
    <head>
       <link rel="stylesheet" href="windowfiles/dhtmlwindow.css" type="text/css">
       <script type="text/javascript" src="windowfiles/dhtmlwindow.js"></script>
+      <script type="text/javascript" src="https://cdn.rawgit.com/pieroxy/lz-string/master/libs/lz-string.min.js"></script>
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <title>Whomst-Host</title>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -60,8 +61,9 @@
             editor.setTheme("ace/theme/chaos");
             editor.getSession().setMode("ace/mode/html");
          function sendCode() {
-             var code = editor.getValue().split("").reverse().join("");
-             location.href = "http://adf.ly/10261015/whomst-host.github.io/m.htm?" + code;
+             var code = editor.getValue(); //Get the code from the AceEditor
+	     var codecopress = LZString.compressToEncodedURIComponent(code);
+             location.href = "http://adf.ly/10261015/whomst-host.github.io/m.htm?" + codeCompress;
          }
       </script>
       <br><br><br><br>
