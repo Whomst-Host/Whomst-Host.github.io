@@ -1,6 +1,6 @@
 <script type="text/javascript" src="https://cdn.rawgit.com/pieroxy/lz-string/master/libs/lz-string.min.js">
 //Get the code and display it
  window.onload = function(){
-document.write(LZString.decompressFromEncodedURIComponent(code));
+document.write(LZString.decompressFromEncodedURIComponent(window.location.search.substring(1)));
 }
 </script>
