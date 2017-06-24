@@ -1,7 +1,7 @@
-<script type="text/javascript" src="https://cdn.rawgit.com/pieroxy/lz-string/master/libs/lz-string.min.js">
+<script  type="text/javascript" src="https://cdn.rawgit.com/pieroxy/lz-string/master/libs/lz-string.min.js"></script>
+<script>
 //Get the code and display it
  window.onload = function(){
-  alert(window.location.search.substring(1));
-alert(LZString.decompressFromEncodedURIComponent(window.location.search.substring(1)));
+document.write(LZString.decompressFromEncodedURIComponent(window.location.search.substring(1)));
 } 
 </script>
