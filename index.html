@@ -54,7 +54,7 @@
       <br>
 	   <div id="editor"></div>
       <br>
- <button onclick="sendCode()" class="myButton">Go!</button>&nbsp;&nbsp;&nbsp;<label class="control control-checkbox" style="display: inline;"><input type="checkbox" id="short" checked><span>Use "Whomst.tk" Shortlink</span><div class= control_indicator></div></label>      
+ <button onclick="sendCode()" class="myButton">Go!</button>&nbsp;&nbsp;&nbsp;      
 	   <script src="https://cdn.rawgit.com/ajaxorg/ace-builds/master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
       <script>
              var editor = ace.edit("editor");
@@ -63,11 +63,11 @@
          function sendCode() {
              var code = editor.getValue(); //Get the code from the AceEditor
 	     var codeCompress = LZString.compressToEncodedURIComponent(code);
-		 if(document.getElementById("short").checked){
+
 			 location.href = "http://whomst.tk/" + codeCompress;
-		 }else{
+
 		     location.href = "https://whomst-host.github.io/m.htm?" + codeCompress;
-	     }
+	     
          }
       </script>
       <br><br><br><br>
